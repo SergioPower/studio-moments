@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import icon from '../assets/icon.png';
 
 export default function NavBar() {
 	return (
@@ -8,7 +9,7 @@ export default function NavBar() {
 				<div className="flex items-center gap-4 cursor-pointer">
 					<img alt="Momentos Logo" className="h-8 w-auto"
 						data-alt="minimalist and elegant photography studio logo icon in gold and white on a dark background"
-						src="/icon.png" />
+						src={icon} />
 					<span className="text-2xl font-bold tracking-tighter text-[#E6D3A3] font-headline">Momentos</span>
 				</div>
 			</Link>

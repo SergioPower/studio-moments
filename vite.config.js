@@ -7,5 +7,5 @@ export default defineConfig({
 		react(),
 		tailwindcss()
 	],
-	base: '/studio-moments/'
+	base: '/studio-moments/',
 })
