@@ -1,24 +1,55 @@
+import ShinyText from '../../component/ShinyText';
+import { Link } from "react-router-dom";
+
 export default function Hero() {
 	return (
-		<section class="relative min-h-screen flex flex-col items-center justify-center pt-24 bg-surface-container-lowest overflow-hidden">
-			<div class="absolute inset-0 z-0 opacity-20">
-				<img class="w-full h-full object-cover grayscale"
-					data-alt="cinematic wide shot of a dark photography studio with soft dust motes dancing in a single beam of golden light"
-					src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVyw4SDo046d1iOpAB6qRaraCS_Ey84GyFlBkCfrYhRSZeU8YeKUB_jglCB9RNBiYN5XtPdmEmWc0dgZ7O91NFRo9HwraUoM0yGontfe770mEYoRiQ60dCbOWAjqoPmZ1tFGP9lgFbbbiuUfmRsIIJZ-O7wsVTCNttGeqo9SVT3nbU1KnWweBIdiIFL6mGkCctZ0kZbmE3LvheIajktvuJh2TqwubcmFjzP80P73WM00rXs9cbpz8Q8UvCQbiVUT44OFswIOMZZ6xk" />
+		<section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+			<div className="absolute inset-0 z-0">
+				<div
+					className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-primary-container/10 rounded-full blur-[120px]">
+				</div>
+				<img className="w-full h-full object-cover opacity-60 grayscale-[0.3]"
+					data-alt="cinematic wide shot of a professional photography studio with high-end cameras and soft ambient golden lighting"
+					src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9C94z0htt9nhX89pJDwBGTKRY-OLyNjIVsFgpxlpHNNQk_szoQNXS-q4QiVVTnFg3lRqMPem4JfJ7n7PY2OV6MH7viYeNbOu-LMoldOkw8NUFkdhU9a5RRXkPBDTUpK9_dNAiZglgq2F5aN_RxaGAysVc-cOYyduIMFTB2GxsHvSyN-hArRPB52opsijgN-zrDCB1J7U_44QloqVF_99p2gFuDuRoiEF6kui8ZDNWm7eY7_CH9KlnHlh0mTPGs9fhsAyVkorJbu3v" />
+				<div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
 			</div>
-			<div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
-				<h1
-					class="text-6xl md:text-9xl font-headline font-extralight tracking-[0.25em] text-on-background mb-12 uppercase leading-none">
-					Fotografía <br /> <span class="text-primary-container font-light opacity-80">&amp;</span> Video
+			<div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+				<p className="font-headline text-primary tracking-[0.3em] uppercase text-sm mb-6 font-medium">Momentos Studio</p>
+				<h1 className="font-headline leading-tight mb-8">
+					<span className="block text-5xl md:text-8xl font-light tracking-tighter text-on-background">Fotografía <span
+						className="font-bold italic text-primary-container text-glow">&amp;</span></span>
+					<span
+						className="block text-6xl md:text-9xl font-extrabold tracking-tighter text-on-surface uppercase">Video</span>
 				</h1>
-				<div class="gold-gradient-line w-full max-w-lg mx-auto mb-10"></div>
-				<p class="text-on-surface-variant font-light tracking-[0.5em] uppercase text-xs md:text-sm opacity-60">
-					Capturamos tus mejores momentos
-				</p>
+				<div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12">
+					<Link to="/gallery">
+						<button
+							className="px-10 py-4 bg-primary-container text-on-primary-container font-bold uppercase tracking-widest text-sm transition-all hover:bg-primary-fixed scale-98-on-click cursor-pointer">
+							Explorar Galería
+						</button>
+					</Link>
+					<button
+						className="px-10 py-4 border border-primary-container/30 text-primary-container font-bold uppercase tracking-widest text-sm transition-all hover:bg-primary-container/5 scale-98-on-click">
+						Nuestra Historia
+					</button>
+				</div>
 			</div>
-			<div class="absolute bottom-16 left-1/2 -translate-x-1/2 flex flex-col items-center gap-6 animate-pulse">
-				<span class="text-[9px] tracking-[0.5em] uppercase text-outline">Explore</span>
-				<div class="w-px h-12 bg-primary-container/30"></div>
+			<div className="absolute bottom-12 left-12 hidden lg:block">
+				<div className="flex items-center gap-4 text-xs tracking-widest text-on-surface-variant uppercase font-medium">
+					<span className="w-12 h-px bg-primary-container/50"></span>
+					<ShinyText
+						text="SCROLL TO EXPERIENCE"
+						speed={3.5}
+						delay={0}
+						color="#685a34"
+						shineColor="#ffffff"
+						spread={75}
+						direction="left"
+						yoyo={false}
+						pauseOnHover={false}
+						disabled={false}
+					/>
+				</div>
 			</div>
 		</section>
 	)

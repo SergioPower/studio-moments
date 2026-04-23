@@ -1,15 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Servicios from "./pages/Servicios";
-import Contacto from "./pages/Contacto";
-import "index.css"
+import Home from "./pages/Home/Home";
+import Gallery from "./pages/Gallery/Gallery";
+
 
 function App() {
 	return (
 		<Routes>
 			<Route path="/" element={<Home />} />
-			<Route path="/galeria" element={<Galeria />} />
-			<Route path="/contacto" element={<Contacto />} />
+			<Route path="/gallery" element={<Gallery />} />
 		</Routes>
 	);
 }
