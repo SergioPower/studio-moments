@@ -1,5 +1,6 @@
 import ShinyText from '../../component/ShinyText';
 import { Link } from "react-router-dom";
+import LoadMore from '../Gallery/LoadMore';
 
 export default function Hero() {
 	return (
@@ -34,22 +35,10 @@ export default function Hero() {
 					</button>
 				</div>
 			</div>
-			<div className="absolute bottom-12 left-12 hidden lg:block">
-				<div className="flex items-center gap-4 text-xs tracking-widest text-on-surface-variant uppercase font-medium">
-					<span className="w-12 h-px bg-primary-container/50"></span>
-					<ShinyText
-						text="SCROLL TO EXPERIENCE"
-						speed={3.5}
-						delay={0}
-						color="#685a34"
-						shineColor="#ffffff"
-						spread={75}
-						direction="left"
-						yoyo={false}
-						pauseOnHover={false}
-						disabled={false}
-					/>
-				</div>
+			<div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-center">
+				<LoadMore>
+					Explorar más
+				</LoadMore>
 			</div>
 		</section>
 	)

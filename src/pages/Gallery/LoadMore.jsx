@@ -1,12 +1,30 @@
-export default function LoadMore() {
+import ShinyText from "../../component/ShinyText";
+
+export default function LoadMore({ children }) {
 	return (
 		<div className="mt-24 flex flex-col items-center">
-			<button
-				className="group flex flex-col items-center gap-4 text-stone-500 hover:text-primary-container transition-colors duration-500">
-				<span className="text-[10px] tracking-[0.5em] uppercase font-label">Explorar más momentos</span>
-				<span
-					className="material-symbols-outlined text-4xl group-hover:translate-y-2 transition-transform duration-500">keyboard_double_arrow_down</span>
-			</button>
+			<ShinyText
+				text={
+					<div className="flex flex-col gap2 text-center">
+						<span className="text-[10px] tracking-[0.5em] uppercase font-blod">
+							{children || "Cargar Más"}
+						</span>
+
+						<span className="material-symbols-outlined text-4xl transition-transform duration-500">
+							keyboard_double_arrow_down
+						</span>
+					</div>
+				}
+				speed={4}
+				delay={0}
+				color="#685a34"
+				shineColor="#ffffff"
+				spread={75}
+				direction="left"
+				yoyo={false}
+				pauseOnHover={false}
+				disabled={false}
+			/>
 		</div>
-	)
+	);
 }

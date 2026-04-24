@@ -38,7 +38,7 @@ function LazyImage({ src, alt }) {
 
 export default function MasonryGallery({ images = [] }) {
 	return (
-		<div className="columns-2 sm:columns-3 md:columns-4 gap-4">
+		<div className="columns-1 sm:columns-3 md:columns-4 gap-4">
 			{images.map((img, index) => (
 				<LazyImage key={index} src={img.src} alt={img.alt || "gallery"} />
 			))}
